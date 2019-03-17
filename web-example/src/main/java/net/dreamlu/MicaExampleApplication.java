@@ -14,7 +14,7 @@ import org.springframework.cache.annotation.EnableCaching;
 public class MicaExampleApplication {
 
 	public static void main(String[] args) {
-		MicaApplication.run("mica-example", MicaExampleApplication.class, args);
+		MicaApplication.run("mica-example-web", MicaExampleApplication.class, args);
 		System.out.println("http://localhost:8080/swagger-ui.html");
 	}
 }
