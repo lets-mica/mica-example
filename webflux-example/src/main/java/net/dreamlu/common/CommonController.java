@@ -3,6 +3,7 @@ package net.dreamlu.common;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import net.dreamlu.mica.captcha.Captcha;
 import net.dreamlu.mica.captcha.reactive.MicaCaptchaReactive;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
@@ -22,10 +23,15 @@ import reactor.core.publisher.Mono;
 public class CommonController {
 	private final MicaCaptchaReactive micaCaptcha;
 
-	@ApiOperation("图片验证码")
+	@ApiOperation("图片验证码-jpg")
 	@GetMapping("captcha.jpg")
-	public Mono<ResponseEntity<Resource>> captcha(ServerWebExchange exchange) {
+	public Mono<ResponseEntity<Resource>> captchaJpg(ServerWebExchange exchange) {
 		return Mono.just(micaCaptcha.generate(exchange));
 	}
 
+	@ApiOperation("图片验证码-base64")
+	@GetMapping("captcha.json")
+	public Mono<ResponseEntity<Captcha>> captchaJson() {
+		return Mono.just(micaCaptcha.generateBase64());
+	}
 }
