@@ -17,6 +17,6 @@ mica 正式版发布之后逐渐丰富该项目~
 
 ## 微信公众号
 
-![如梦技术](docs/img/net.dreamlu-weixin.jpg)
+![如梦技术](docs/img/dreamlu-weixin.jpg)
 
 精彩内容每日推荐！
