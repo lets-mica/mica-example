@@ -38,18 +38,11 @@
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-log4j2</artifactId>
         </dependency>
-        <!-- swagger begin -->
+        <!-- swagger begin webflux swagger 支持尚未发布正式版，为了避免代码报错 -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-bean-validators</artifactId>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.20</version>
         </dependency>
         <!-- swagger end -->
     </dependencies>
