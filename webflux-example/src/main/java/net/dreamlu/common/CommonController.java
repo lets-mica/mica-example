@@ -31,7 +31,7 @@ public class CommonController {
 
 	@ApiOperation("图片验证码-base64")
 	@GetMapping("captcha.json")
-	public Mono<ResponseEntity<Captcha>> captchaJson() {
+	public Mono<Captcha> captchaJson() {
 		return Mono.just(micaCaptcha.generateBase64());
 	}
 }

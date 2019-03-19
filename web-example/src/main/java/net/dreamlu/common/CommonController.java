@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import net.dreamlu.mica.captcha.Captcha;
 import net.dreamlu.mica.captcha.servlet.MicaCaptchaServlet;
+import net.dreamlu.mica.core.result.R;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +32,7 @@ public class CommonController {
 
 	@ApiOperation("图片验证码-base64")
 	@GetMapping("captcha.json")
-	public ResponseEntity<Captcha> captchaJson() {
-		return micaCaptcha.generateBase64();
+	public R<Captcha> captchaJson() {
+		return R.success(micaCaptcha.generateBase64());
 	}
 }
