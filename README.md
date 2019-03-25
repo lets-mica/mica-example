@@ -3,7 +3,7 @@
 ## 链接
 mica 源码：https://github.com/lets-mica
 
-mica 文档：https://www.net.dreamlu.net/#/doc/docs
+mica 文档：https://www.dreamlu.net/docs/
 
 ## 计划
 mica 正式版发布之后逐渐丰富该项目~
