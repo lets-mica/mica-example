@@ -1,0 +1,26 @@
+spring:
+  reactor:
+    stacktrace-mode:
+      enabled: false
+  boot:
+    admin:
+      discovery:
+        services: 'mica*'
+      ui:
+        title: Mica Boot Admin
+
+dingtalk:
+  link: http://localhost:8081
+  access-token: xxxx
+
+# log
+logging:
+  level:
+    root: info
+    net.dreamlu: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,5 +1,9 @@
 # mica 演示项目
 
+## 启动说明
+* 下载和启动 [`nacos`](https://nacos.io/zh-cn/docs/what-is-nacos.html) 服务。 
+
+
 ## 链接
 mica 源码：https://github.com/lets-mica
 

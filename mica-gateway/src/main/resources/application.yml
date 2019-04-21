@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+#      routes:
+#      - id: oschina
+#        uri: http://www.oschina.net
+#        predicates:
+#        - Path=/**
+#        filters:
+#        - name: RequestRateLimiter
+#          args:
+#           redis-rate-limiter:
+#             replenish-rate: 10
+#             burst-capacity: 20
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
