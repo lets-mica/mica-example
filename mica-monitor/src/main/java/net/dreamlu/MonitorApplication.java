@@ -18,6 +18,7 @@ public class MonitorApplication {
 
 	public static void main(String[] args) {
 		MicaApplication.run("mica-monitor", MonitorApplication.class, args);
+		System.out.println("http://localhost:8081");
 	}
 
 }

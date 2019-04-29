@@ -15,6 +15,6 @@ public class MicaExampleApplication {
 
 	public static void main(String[] args) {
 		MicaApplication.run("mica-example-webflux", MicaExampleApplication.class, args);
-		System.out.println("http://localhost:8080");
+		System.out.println("http://localhost:8084");
 	}
 }

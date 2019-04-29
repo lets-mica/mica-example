@@ -15,6 +15,6 @@ public class MicaExampleApplication {
 
 	public static void main(String[] args) {
 		MicaApplication.run("mica-example-web", MicaExampleApplication.class, args);
-		System.out.println("http://localhost:8080/swagger-ui.html");
+		System.out.println("http://localhost:8083/swagger-ui.html");
 	}
 }
