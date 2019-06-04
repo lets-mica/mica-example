@@ -20,7 +20,6 @@ public class MicaExampleApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		MicaApplication.run("mica-example-web", MicaExampleApplication.class, args);
-		System.out.println("http://localhost:8083/swagger-ui.html");
 	}
 
 	@Override

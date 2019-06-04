@@ -30,28 +30,21 @@
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-boot</artifactId>
         </dependency>
+        <!-- 验证码 -->
         <dependency>
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-captcha</artifactId>
         </dependency>
+        <!-- log -->
         <dependency>
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-log4j2</artifactId>
         </dependency>
-        <!-- swagger begin -->
+        <!-- swagger -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-plus-swagger</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-bean-validators</artifactId>
-        </dependency>
-        <!-- swagger end -->
     </dependencies>
 
 </project>

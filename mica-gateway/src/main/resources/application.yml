@@ -22,3 +22,9 @@ management:
     web:
       exposure:
         include: '*'
+mica:
+  context:
+    headers:
+      allowed:
+        - "X-Mica-Token"
+        - "X-Mica-Deviceid"
