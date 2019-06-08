@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import net.dreamlu.mica.captcha.Captcha;
 import net.dreamlu.mica.captcha.reactive.MicaCaptchaReactive;
 import org.springframework.core.io.Resource;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ public class CommonController {
 	private final MicaCaptchaReactive micaCaptcha;
 
 	@ApiOperation("图片验证码-jpg")
-	@GetMapping("captcha.jpg")
+	@GetMapping(value = "captcha.jpg", produces = MediaType.IMAGE_JPEG_VALUE)
 	public Mono<ResponseEntity<Resource>> captchaJpg(ServerWebExchange exchange) {
 		return Mono.just(micaCaptcha.generate(exchange));
 	}
