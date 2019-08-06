@@ -29,10 +29,6 @@
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-captcha</artifactId>
         </dependency>
-        <dependency>
-            <groupId>net.dreamlu</groupId>
-            <artifactId>mica-plus-ribbon</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

@@ -16,6 +16,7 @@ public class SocialWeb implements IController {
 	private AuthRequestFactory authRequestFactory;
 
 	@GetMapping("auth")
+	@ResponseBody
 	public String auth() {
 		AuthSource[] values = AuthSource.values();
 
