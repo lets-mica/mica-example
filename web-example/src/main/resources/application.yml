@@ -3,3 +3,10 @@ management:
     web:
       exposure:
         include: '*'
+
+mica:
+  social:
+    ding-talk:
+      client-id: dingoab7pkxxteufaoc50x
+      client-secret: pclr4hldAHhhlZxQmsxdLNMhrYpl5bnCFmX56zAYT8BgdqDF-dVhCORfaTZoO2hz
+      redirect-uri: http://frp.dreamlu.net/callback

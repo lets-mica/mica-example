@@ -30,6 +30,10 @@
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-boot</artifactId>
         </dependency>
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-plus-social</artifactId>
+        </dependency>
         <!-- 验证码 -->
         <dependency>
             <groupId>net.dreamlu</groupId>
