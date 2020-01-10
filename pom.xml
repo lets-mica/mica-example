@@ -11,24 +11,21 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <mica.version>1.1.8-SNAPSHOT</mica.version>
-        <spring.boot.admin.version>2.1.6</spring.boot.admin.version>
-        <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
-        <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
+        <mica.version>1.2.2-SNAPSHOT</mica.version>
+        <spring.cloud.version>Greenwich.SR4</spring.cloud.version>
+        <spring.cloud.alibaba.version>2.1.1.RELEASE</spring.cloud.alibaba.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.1.11.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <modules>
         <module>web-example</module>
         <module>webflux-example</module>
-        <module>mica-monitor</module>
-        <module>mica-gateway</module>
     </modules>
 
     <dependencies>
@@ -43,10 +40,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -100,13 +93,6 @@
                 <groupId>net.dreamlu</groupId>
                 <artifactId>mica-bom</artifactId>
                 <version>${mica.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-dependencies</artifactId>
-                <version>${spring.boot.admin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
