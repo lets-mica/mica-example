@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: "mica-jetcache-example"
+  profiles:
+    active: "dev"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

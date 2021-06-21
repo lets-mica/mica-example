@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: "mica-lite-example"
+  profiles:
+    active: "dev"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+mica:
+  xss:
+    mode: escape
