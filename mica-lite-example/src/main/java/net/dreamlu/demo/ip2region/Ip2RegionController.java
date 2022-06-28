@@ -1,6 +1,6 @@
 package net.dreamlu.demo.ip2region;
 
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import net.dreamlu.mica.core.result.R;
 import net.dreamlu.mica.core.utils.WebUtil;
@@ -20,7 +20,7 @@ import javax.validation.constraints.NotBlank;
 @Validated
 @RestController
 @RequestMapping("ip")
-@Api(tags = "模块::ip2region示例")
+@Tag(name = "模块::ip2region示例")
 @RequiredArgsConstructor
 public class Ip2RegionController {
 	private final Ip2regionSearcher searcher;

@@ -1,6 +1,6 @@
 package net.dreamlu.demo.xss;
 
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import net.dreamlu.demo.form.UserForm;
 import net.dreamlu.mica.core.result.R;
 import org.springframework.validation.annotation.Validated;
@@ -15,7 +15,7 @@ import javax.validation.constraints.NotEmpty;
  */
 @Validated
 @RestController
-@Api(tags = "模块::xss示例")
+@Tag(name = "模块::xss示例")
 @RequestMapping("xss")
 public class XssController {
 

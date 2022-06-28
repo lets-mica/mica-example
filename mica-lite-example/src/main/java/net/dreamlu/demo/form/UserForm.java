@@ -1,7 +1,6 @@
 package net.dreamlu.demo.form;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -12,10 +11,10 @@ import javax.validation.constraints.NotBlank;
  * @author L.cm
  */
 @Data
-@ApiModel("用户表单模型")
+@Schema(name = "用户表单模型")
 public class UserForm {
 
-	@ApiModelProperty("用户名")
+	@Schema(name = "用户名")
 	@NotBlank
 	private String name;
 }

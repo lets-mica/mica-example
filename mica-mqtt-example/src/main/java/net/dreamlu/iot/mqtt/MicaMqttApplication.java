@@ -21,8 +21,6 @@ import net.dreamlu.iot.mqtt.codec.ByteBufferUtil;
 import net.dreamlu.iot.mqtt.core.server.event.IMqttMessageListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -40,8 +38,8 @@ public class MicaMqttApplication{
 
 	@Bean
 	public IMqttMessageListener mqttMessageListener() {
-		return (clientId, topic, mqttQoS, payload) -> {
-			System.out.println(ByteBufferUtil.toString(payload));
+		return (context, clientId, message) -> {
+			System.out.println(ByteBufferUtil.toString(message.getPayload()));
 		};
 	}
 

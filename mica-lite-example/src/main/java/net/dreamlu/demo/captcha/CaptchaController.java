@@ -1,7 +1,7 @@
 package net.dreamlu.demo.captcha;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import net.dreamlu.mica.captcha.service.ICaptchaService;
 import net.dreamlu.mica.captcha.vo.CaptchaVo;
@@ -22,12 +22,12 @@ import javax.servlet.http.HttpSession;
  */
 @RestController
 @RequestMapping("captcha")
-@Api(tags = "模块::captcha示例")
+@Tag(name = "模块::captcha示例")
 @RequiredArgsConstructor
 public class CaptchaController {
 	private final ICaptchaService captchaService;
 
-	@ApiOperation("图片验证码-jpg")
+	@Operation(summary = "图片验证码-jpg")
 	@GetMapping(value = "captcha.jpg", produces = MediaType.IMAGE_JPEG_VALUE)
 	public ResponseEntity<Resource> captchaJpg(HttpSession session) {
 		// 注意：图片验证码可以采用 cookie + cache 或 session 存储的方法
@@ -36,7 +36,7 @@ public class CaptchaController {
 		return captchaService.generateResponseEntity(uuid);
 	}
 
-	@ApiOperation("图片验证码-base64")
+	@Operation(summary = "图片验证码-base64")
 	@GetMapping("captcha.json")
 	public CaptchaVo captchaJson() {
 		// 可以采用 cache 或 session 存储 uuid

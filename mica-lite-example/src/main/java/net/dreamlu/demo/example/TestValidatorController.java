@@ -1,9 +1,7 @@
 package net.dreamlu.demo.example;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import net.dreamlu.demo.form.UserForm;
 import net.dreamlu.mica.core.result.R;
 import org.springframework.validation.annotation.Validated;
@@ -22,22 +20,16 @@ import javax.validation.constraints.NotEmpty;
 @Validated
 @RestController
 @RequestMapping("validator")
-@Api("参数校验演示")
+@Tag(name = "参数校验演示")
 public class TestValidatorController {
 
-	@ApiOperation("演示基础类型-校验")
-	@ApiImplicitParams({
-		@ApiImplicitParam(name = "name", required = true, value = "用户名")
-	})
+	@Operation(summary = "演示基础类型-校验")
 	@PostMapping("primitive")
 	public R<String> primitiveParam(@NotEmpty String name) {
 		return R.success(name);
 	}
 
-	@ApiOperation("演示 java bean 类型-校验")
-	@ApiImplicitParams({
-		@ApiImplicitParam(name = "name", required = true, value = "用户名")
-	})
+	@Operation(summary = "演示 java bean 类型-校验")
 	@PostMapping("bean")
 	public R<UserForm> formParam(@Valid UserForm form) {
 		return R.success(form);

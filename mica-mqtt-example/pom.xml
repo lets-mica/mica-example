@@ -17,7 +17,7 @@
         </dependency>
         <dependency>
             <groupId>net.dreamlu</groupId>
-            <artifactId>mica-mqtt-spring-boot-starter</artifactId>
+            <artifactId>mica-mqtt-server-spring-boot-starter</artifactId>
             <version>${mica-mqtt.version}</version>
         </dependency>
     </dependencies>
