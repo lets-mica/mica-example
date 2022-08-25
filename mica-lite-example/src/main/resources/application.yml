@@ -10,4 +10,10 @@ management:
         include: '*'
 mica:
   xss:
-    mode: escape
+    mode: validate
+# springdoc 支持 knife4j
+springdoc:
+  swagger-ui:
+    urls:
+      - name: swagger
+        url: /v3/api-docs
