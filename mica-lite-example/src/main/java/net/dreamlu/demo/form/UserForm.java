@@ -11,10 +11,10 @@ import javax.validation.constraints.NotBlank;
  * @author L.cm
  */
 @Data
-@Schema(name = "用户表单模型")
+@Schema(description = "用户表单模型")
 public class UserForm {
 
-	@Schema(name = "用户名")
+	@Schema(description = "用户名")
 	@NotBlank
 	private String name;
 }
