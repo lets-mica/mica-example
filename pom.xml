@@ -5,45 +5,78 @@
     <groupId>net.dreamlu</groupId>
     <artifactId>mica-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <name>mica-example</name>
     <description>Spring boot mica example</description>
 
     <properties>
-        <java.version>1.8</java.version>
-        <mica.version>2.7.4-SNAPSHOT</mica.version>
-        <mica-mqtt.version>1.3.8</mica-mqtt.version>
+        <java.version>17</java.version>
+        <mica.version>4.0.0-SNAPSHOT</mica.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>4.0.0</version>
+        <relativePath/>
     </parent>
 
-    <modules>
-        <module>mica-lite-example</module>
-        <module>mica-jetcache-example</module>
-        <module>mica-mqtt-example</module>
-    </modules>
-
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <artifactId>spring-boot-starter-aspectj</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-lite</artifactId>
+        </dependency>
+        <!-- 验证码 -->
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-captcha</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-caffeine</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-ip2region</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-xss</artifactId>
+        </dependency>
+        <!-- log -->
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-logging</artifactId>
+        </dependency>
+        <!-- swagger -->
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-openapi</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
             <optional>true</optional>
         </dependency>
     </dependencies>
@@ -71,7 +104,7 @@
     </dependencyManagement>
 
     <repositories>
-        <!--阿里云主仓库，代理了 maven central 和 jcenter 仓库-->
+        <!--阿里云主仓库，代理了 maven central 仓库-->
         <repository>
             <id>aliyun</id>
             <name>aliyun</name>
@@ -86,7 +119,7 @@
         <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -95,5 +128,11 @@
             </releases>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

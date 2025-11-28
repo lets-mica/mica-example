@@ -1,9 +1,8 @@
 package net.dreamlu.demo.form;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-
-import javax.validation.constraints.NotBlank;
 
 /**
  * 用户表单模型
@@ -14,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 @Schema(description = "用户表单模型")
 public class UserForm {
 
-	@Schema(description = "用户名")
+	@Schema(description = "用户名", example = "<scritp>alert(1)</script>")
 	@NotBlank
 	private String name;
 }

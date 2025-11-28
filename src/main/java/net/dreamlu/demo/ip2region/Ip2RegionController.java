@@ -1,6 +1,7 @@
 package net.dreamlu.demo.ip2region;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
 import net.dreamlu.mica.core.result.R;
 import net.dreamlu.mica.core.utils.WebUtil;
@@ -9,8 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.validation.constraints.NotBlank;
 
 /**
  * mica-xss 演示

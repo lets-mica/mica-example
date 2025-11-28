@@ -1,12 +1,11 @@
 package net.dreamlu.demo.xss;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.NotEmpty;
 import net.dreamlu.demo.form.UserForm;
 import net.dreamlu.mica.core.result.R;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.constraints.NotEmpty;
 
 /**
  * mica-xss 演示
