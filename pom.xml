@@ -42,10 +42,10 @@
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-captcha</artifactId>
         </dependency>
-        <dependency>
-            <groupId>net.dreamlu</groupId>
-            <artifactId>mica-caffeine</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.dreamlu</groupId>-->
+<!--            <artifactId>mica-caffeine</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-ip2region</artifactId>
@@ -53,6 +53,11 @@
         <dependency>
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-xss</artifactId>
+        </dependency>
+        <!-- redis -->
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-redis</artifactId>
         </dependency>
         <!-- log -->
         <dependency>

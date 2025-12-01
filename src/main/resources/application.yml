@@ -11,6 +11,22 @@ management:
 mica:
   xss:
     mode: validate
+  redis:
+    # redis key 失效事件
+    key-expired-event:
+      enable: true
+    # 分布式限流
+    rate-limiter:
+      enable: true
+    # 序列化方式：JSON、JDK
+    serializer-type: JSON
+    # Redis Stream 配置
+    stream:
+      enable: true
+      # consumer group，默认：服务名 + 环境
+      consumer-group: ${spring.application.name}
+      # 消费者名称，默认：ip + 端口
+      consumer-name: ${spring.application.name}-consumer
 # springdoc 支持 knife4j
 springdoc:
   swagger-ui:

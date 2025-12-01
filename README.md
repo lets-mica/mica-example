@@ -1,4 +1,4 @@
-# mica 演示项目
+# mica 测试、功能演示项目
 
 ## 注意事项
 参考请注明：参考自 mica-example：https://github.com/lets-mica/mica-example
