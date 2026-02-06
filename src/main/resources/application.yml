@@ -1,9 +1,13 @@
+server:
+  port: 8080
 spring:
   application:
     name: "mica-lite-example"
   profiles:
     active: "dev"
 management:
+  server:
+    port: 8081
   endpoints:
     web:
       exposure:
@@ -22,7 +26,7 @@ mica:
     serializer-type: JSON
     # Redis Stream 配置
     stream:
-      enable: true
+      enable: false
       # consumer group，默认：服务名 + 环境
       consumer-group: ${spring.application.name}
       # 消费者名称，默认：ip + 端口

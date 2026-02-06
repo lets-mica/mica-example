@@ -1,6 +1,5 @@
 package net.dreamlu.demo.redis;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.dreamlu.demo.redis.pojo.OrderDto;
 import net.dreamlu.mica.redis.cache.CacheKey;
@@ -8,7 +7,9 @@ import net.dreamlu.mica.redis.cache.MicaRedisCache;
 import net.dreamlu.mica.redis.ratelimiter.RateLimiter;
 import net.dreamlu.mica.redis.ratelimiter.RateLimiterClient;
 import net.dreamlu.mica.redis.stream.RStreamTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.stream.RecordId;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Duration;
@@ -24,13 +25,15 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @RestController
 @RequestMapping("/redis")
-@RequiredArgsConstructor
 public class RedisController {
-
-	private final MicaRedisCache redisCache;
-	private final RateLimiterClient rateLimiterClient;
-	private final RedisService redisService;
-	private final RStreamTemplate streamTemplate;
+	@Autowired
+	private MicaRedisCache redisCache;
+	@Autowired
+	private RateLimiterClient rateLimiterClient;
+	@Autowired
+	private RedisService redisService;
+	@Autowired(required = false)
+	private RStreamTemplate streamTemplate;
 
 	/**
 	 * 测试 redis cache 增强 - 使用 @Cacheable 注解
